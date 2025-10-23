@@ -3496,6 +3496,7 @@ img.u-pull-left {
   padding-bottom: var(--vspace-5);
   color: rgba(255, 255, 255, 0.35);
   position: relative;
+  font-family: var(--font-2);
 }
 
 /* --------------------------------------------------------------------
