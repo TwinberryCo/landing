@@ -524,6 +524,56 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* ===================================================================
+ * # CUSTOM CURSOR
+ *
+ *
+ * ------------------------------------------------------------------- */
+* {
+  cursor: none !important;
+}
+
+/* Show normal cursor on touch devices */
+@media (hover: none) and (pointer: coarse) {
+  * {
+    cursor: auto !important;
+  }
+}
+
+.custom-cursor {
+  position: fixed;
+  width: 32px;
+  height: 32px;
+  background-image: url("../images/loghi/PittogrammaBianco.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  pointer-events: none;
+  z-index: 9999;
+  transition: transform 0.15s ease, opacity 0.15s ease;
+  transform: translate(-50%, -50%);
+  filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.8));
+}
+
+.custom-cursor-follower {
+  position: fixed;
+  width: 8px;
+  height: 8px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9998;
+  transition: transform 0.2s ease, opacity 0.3s ease;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.8), 0 0 3px rgba(0, 0, 0, 0.4);
+}
+
+.custom-cursor.hover {
+  transform: translate(-50%, -50%) scale(1.4);
+  opacity: 0.8;
+}
+
 p {
   font-size: inherit;
   text-rendering: optimizeLegibility;
@@ -1836,7 +1886,7 @@ img,
   flex-flow: row wrap;
   justify-content: center;
   align-items: center;
-  background: var(--color-preloader-bg);
+  background: var(--color-black);
   z-index: 500;
   height: 100vh;
   width: 100%;
@@ -1848,19 +1898,27 @@ img,
 }
 
 #loader {
-  width: var(--vspace-2);
-  height: var(--vspace-2);
+  width: 80px;
+  height: 80px;
   padding: 0;
-  background-color: var(--color-loader);
-  border-radius: 100%;
-  -webkit-animation: sk-scaleout 1s infinite ease-in-out;
-  animation: sk-scaleout 1s infinite ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -webkit-animation: sk-scaleout 2s infinite ease-in-out;
+  animation: sk-scaleout 2s infinite ease-in-out;
+}
+
+#loader img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 @-webkit-keyframes sk-scaleout {
   0% {
     -webkit-transform: scale(0);
     transform: scale(0);
+    opacity: 1;
   }
 
   100% {
@@ -1873,6 +1931,7 @@ img,
 @keyframes sk-scaleout {
   0% {
     transform: scale(0);
+    opacity: 1;
   }
 
   100% {
@@ -3142,7 +3201,7 @@ img.u-pull-left {
   bottom: 0;
   width: 100%;
   height: 100%;
-  background-image: url(../images/PatternNero.svg);
+  background-image: url(../images/loghi/PatternNero.svg);
   background-repeat: no-repeat;
   background-position: center 30%;
   background-size: cover;
@@ -3200,13 +3259,12 @@ img.u-pull-left {
   font-weight: 500;
   font-size: var(--text-md);
   text-transform: uppercase;
-  letter-spacing: 0.2em;
   color: white;
   margin-top: 0;
 }
 
 .s-intro__title {
-  --text-title-size: 10.4rem;
+  --text-title-size: 7.4rem;
   --text-multiplier: 1;
   font-weight: 700;
   font-size: calc(var(--text-title-size) * var(--text-multiplier));
@@ -3400,7 +3458,6 @@ img.u-pull-left {
 .s-about {
   --text-desc-size: 5.2rem;
   --text-multiplier: 1;
-
   background-color: white;
   padding-top: var(--vspace-2);
   padding-bottom: var(--vspace-6);
@@ -3511,7 +3568,7 @@ img.u-pull-left {
   bottom: 0;
   width: 100%;
   height: 100%;
-  background-image: url(../images/services-bg.jpg);
+  background-image: url(../images/loghi/PatternBiancoVerticale.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -3529,7 +3586,7 @@ img.u-pull-left {
   height: 100%;
   background: black;
   pointer-events: none;
-  opacity: 0.6;
+  opacity: 0.3;
 }
 
 /* --------------------------------------------------------------------
@@ -3994,7 +4051,7 @@ img.u-pull-left {
   width: 100%;
   height: 100%;
   pointer-events: none;
-  opacity: 0.75;
+  opacity: 0.2;
 }
 
 .s-contact .section-header {
