@@ -352,22 +352,25 @@
 
     // Display form status (callback function for JSONP)
     window.displayMailChimpStatus = function (data) {
+      // Mark that the JSONP callback was invoked
+      window._mcCallbackFired = true;
+
       // Make sure the data is in the right format and that there's a status container
-      if (!data.result || !data.msg || !mcStatus) return;
+      if (!data || !data.result || !data.msg || !window.mcStatus) return;
 
       // Update our status message
-      mcStatus.innerHTML = data.msg;
+      window.mcStatus.innerHTML = data.msg;
 
       // If error, add error class
       if (data.result === "error") {
-        mcStatus.classList.remove("success-message");
-        mcStatus.classList.add("error-message");
+        window.mcStatus.classList.remove("success-message");
+        window.mcStatus.classList.add("error-message");
         return;
       }
 
       // Otherwise, add success class
-      mcStatus.classList.remove("error-message");
-      mcStatus.classList.add("success-message");
+      window.mcStatus.classList.remove("error-message");
+      window.mcStatus.classList.add("success-message");
     };
 
     // Submit the form
@@ -393,15 +396,51 @@
       // Create global variable for the status container
       window.mcStatus = form.querySelector(".mc-status");
       window.mcStatus.classList.remove("error-message", "success-message");
-      window.mcStatus.innerText = "Submitting...";
+      window.mcStatus.innerText = "Invio...";
+
+      // Reset callback flag and set a timeout fallback
+      window._mcCallbackFired = false;
 
       // Insert script tag into the DOM
       ref.parentNode.insertBefore(script, ref);
 
-      // After the script is loaded (and executed), remove it
-      script.onload = function () {
+      // Handle network/script load errors
+      script.onerror = function () {
+        // Prevent double-handling if callback already fired
+        if (window._mcCallbackFired) return;
+        window._mcCallbackFired = true;
+        if (window.mcStatus) {
+          window.mcStatus.classList.remove("success-message");
+          window.mcStatus.classList.add("error-message");
+          window.mcStatus.innerText = "Errore di rete. Riprova più tardi.";
+        }
         this.remove();
       };
+
+      // After the script is loaded (and executed), remove it
+      script.onload = function () {
+        // Delay removal briefly to allow the JSONP callback to run
+        var self = this;
+        setTimeout(function () {
+          try {
+            self.remove();
+          } catch (e) {
+            /* ignore */
+          }
+        }, 500);
+      };
+
+      // Fallback: if no JSONP callback after X ms, show friendly error
+      setTimeout(function () {
+        if (!window._mcCallbackFired) {
+          window._mcCallbackFired = true;
+          if (window.mcStatus) {
+            window.mcStatus.classList.remove("success-message");
+            window.mcStatus.classList.add("error-message");
+            window.mcStatus.innerText = "Nessuna risposta dal server. Riprova.";
+          }
+        }
+      }, 10000); // 10s timeout
     }
 
     // Check email field on submit
