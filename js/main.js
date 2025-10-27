@@ -9,8 +9,9 @@
 
   const cfg = {
     // MailChimp URL
+    // Use the site's Mailchimp form action URL (not the placeholder)
     mailChimpURL:
-      "https://facebook.us1.list-manage.com/subscribe/post?u=1abf75f6981256963a47d197a&amp;id=37c6d8f4d6",
+      "https://twinberry.us9.list-manage.com/subscribe/post?u=0e9ede1f0c950c0a4e11e96f0&id=5b1362dbeb&f_id=00f4c2e1f0",
   };
 
   /* animations
