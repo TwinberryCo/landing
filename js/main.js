@@ -222,9 +222,14 @@
     const testimonialsSwiper = new Swiper(".testimonial-slider", {
       slidesPerView: 1,
       effect: "slide",
+      loop: true,
       pagination: {
         el: ".swiper-pagination",
         clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
       },
     });
   }; // end ssSwiper
