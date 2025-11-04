@@ -3267,7 +3267,7 @@ img.u-pull-left {
   --text-title-size: 7.4rem;
   --text-multiplier: 1;
   font-weight: 700;
-  font-size: calc(var(--text-title-size) * var(--text-multiplier));
+  font-size: calc(var(--text-title-size) * var(--text-multiplier) * 0.7);
   line-height: 1.1154;
   color: white;
   margin-top: 0;
