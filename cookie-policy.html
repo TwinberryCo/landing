@@ -1,0 +1,428 @@
+<!doctype html>
+<html lang="it" class="no-js">
+  <head>
+    <!--- basic page needs
+    ================================================== -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Cookie Policy - Twinberry</title>
+
+    <script>
+      document.documentElement.classList.remove("no-js");
+      document.documentElement.classList.add("js");
+    </script>
+
+    <!-- Google Fonts (caricati prima di CookieYes per evitare blocco)
+    ================================================== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Lora:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Start cookieyes banner -->
+    <script
+      id="cookieyes"
+      type="text/javascript"
+      src="https://cdn-cookieyes.com/client_data/fd3a4803320b7d1b58e87c25f4fd7a1f/script.js"
+    ></script>
+    <!-- End cookieyes banner -->
+
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-VT495ZP6BR"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-VT495ZP6BR");
+    </script>
+
+    <!-- CSS
+    ================================================== -->
+    <link rel="stylesheet" href="css/vendor.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/cookieyes-fix.css" />
+
+    <!-- Cookie Policy specific styles -->
+    <style>
+      /* Override per sfondo chiaro */
+      body {
+        background-color: #f5f5f5;
+      }
+      /* Forza visibilità header (animazione preloader non attiva) */
+      .s-header__logo,
+      .s-header__menu-toggle {
+        opacity: 1 !important;
+      }
+      .s-header__menu-toggle {
+        color: #1a1a1a;
+      }
+      .s-header__menu-text {
+        color: #1a1a1a;
+      }
+      .s-header__menu-icon,
+      .s-header__menu-icon::before,
+      .s-header__menu-icon::after {
+        background-color: #1a1a1a;
+      }
+      /* Quando scorro e il bottone diventa opaco, testo e icone diventano bianchi */
+      .s-header__menu-toggle.opaque .s-header__menu-text {
+        color: #ffffff;
+      }
+      .s-header__menu-toggle.opaque .s-header__menu-icon,
+      .s-header__menu-toggle.opaque .s-header__menu-icon::before,
+      .s-header__menu-toggle.opaque .s-header__menu-icon::after {
+        background-color: #ffffff;
+      }
+      .s-cookie-policy {
+        padding: 120px 0 80px 0;
+        background-color: #f5f5f5;
+        min-height: 100vh;
+      }
+      .s-cookie-policy__content {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 0 2rem;
+      }
+      .s-cookie-policy h1 {
+        font-size: var(--text-display-1);
+        margin-bottom: var(--vspace-1);
+        color: #1a1a1a;
+      }
+      .s-cookie-policy h2 {
+        font-size: var(--text-xl);
+        margin-top: var(--vspace-2);
+        margin-bottom: var(--vspace-0_75);
+        color: #1a1a1a;
+      }
+      .s-cookie-policy p {
+        margin-bottom: var(--vspace-0_75);
+        color: #333333;
+        line-height: 1.8;
+      }
+      .s-cookie-policy strong {
+        color: #1a1a1a;
+      }
+      .s-cookie-policy__date {
+        font-size: var(--text-sm);
+        color: #666666;
+        margin-bottom: var(--vspace-1_5);
+      }
+      .s-cookie-policy a {
+        color: #0066cc;
+        text-decoration: underline;
+      }
+      .s-cookie-policy a:hover {
+        color: #004499;
+      }
+      .s-cookie-policy .cky-banner-element {
+        display: inline-block;
+        padding: 12px 36px;
+        background: #1a1a1a;
+        color: #ffffff;
+        border: none;
+        border-radius: 0;
+        cursor: pointer;
+        font-family: var(--font-2);
+        font-weight: 500;
+        font-size: var(--text-xs);
+        text-transform: uppercase;
+        letter-spacing: 0.35em;
+        text-decoration: none;
+        transition: all 0.3s;
+        margin: var(--vspace-1) 0;
+      }
+      .s-cookie-policy .cky-banner-element:hover {
+        background: #333333;
+        color: #ffffff;
+      }
+      .s-cookie-policy .cky-audit-table-element {
+        margin: var(--vspace-1) 0;
+      }
+      .s-cookie-policy__back {
+        margin-top: var(--vspace-2);
+      }
+      .s-cookie-policy__back .btn--stroke {
+        border-color: #1a1a1a;
+        color: #1a1a1a;
+        text-decoration: none;
+      }
+      .s-cookie-policy__back .btn--stroke:hover {
+        background-color: #1a1a1a;
+        color: #ffffff;
+        text-decoration: none;
+      }
+      .s-cookie-policy__powered {
+        margin-top: var(--vspace-2);
+        font-size: var(--text-sm);
+        color: #666666;
+        border-top: 1px solid #dddddd;
+        padding-top: var(--vspace-1);
+      }
+      .s-footer {
+        background-color: #1a1a1a;
+      }
+    </style>
+
+    <!-- favicons
+    ================================================== -->
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+    <link rel="manifest" href="site.webmanifest" />
+  </head>
+
+  <body id="top">
+    <!-- page wrap
+    ================================================== -->
+    <div id="page" class="s-pagewrap">
+      <!-- # site header 
+        ================================================== -->
+      <header class="s-header">
+        <div class="s-header__logo">
+          <a class="logo" href="index.html">
+            <img src="images/loghi/PittogrammaNeroCerchio.svg" alt="Homepage" />
+          </a>
+        </div>
+
+        <a class="s-header__menu-toggle" href="#0">
+          <span class="s-header__menu-text">Menu</span>
+          <span class="s-header__menu-icon"></span>
+        </a>
+
+        <nav class="s-header__nav">
+          <a href="#0" class="s-header__nav-close-btn" title="close">
+            <span>Chiudi</span>
+          </a>
+          <div style="text-align: center; padding: 1rem 0">
+            <img
+              src="images/loghi/LOGOTBbianco.svg"
+              alt="Twinberry"
+              style="height: 40px"
+            />
+          </div>
+
+          <ul class="s-header__nav-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#services">Cosa facciamo</a></li>
+            <li><a href="index.html#portfolio">Prodotti</a></li>
+            <li><a href="index.html#who_we_are">Chi siamo</a></li>
+            <li><a href="index.html#contact">Contatti</a></li>
+          </ul>
+
+          <ul class="s-header__social">
+            <li>
+              <a href="https://www.linkedin.com/company/wearetwinberry/">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  style="fill: rgba(255, 255, 255, 1)"
+                >
+                  <path
+                    d="M20 3H4a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1zM8.339 18.337H5.667v-8.59h2.672v8.59zM7.003 8.574a1.548 1.548 0 1 1 0-3.096 1.548 1.548 0 0 1 0 3.096zm11.335 9.763h-2.669V14.16c0-.996-.018-2.277-1.388-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248h-2.667v-8.59h2.56v1.174h.037c.355-.675 1.227-1.387 2.524-1.387 2.704 0 3.203 1.778 3.203 4.092v4.71z"
+                  ></path>
+                </svg>
+                <span class="u-screen-reader-text">LinkedIn</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/twinberry__">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  style="fill: rgba(0, 0, 0, 1)"
+                >
+                  <path
+                    d="M11.999,7.377c-2.554,0-4.623,2.07-4.623,4.623c0,2.554,2.069,4.624,4.623,4.624c2.552,0,4.623-2.07,4.623-4.624 C16.622,9.447,14.551,7.377,11.999,7.377L11.999,7.377z M11.999,15.004c-1.659,0-3.004-1.345-3.004-3.003 c0-1.659,1.345-3.003,3.004-3.003s3.002,1.344,3.002,3.003C15.001,13.659,13.658,15.004,11.999,15.004L11.999,15.004z"
+                  ></path>
+                  <circle cx="16.806" cy="7.207" r="1.078"></circle>
+                  <path
+                    d="M20.533,6.111c-0.469-1.209-1.424-2.165-2.633-2.632c-0.699-0.263-1.438-0.404-2.186-0.42 c-0.963-0.042-1.268-0.054-3.71-0.054s-2.755,0-3.71,0.054C7.548,3.074,6.809,3.215,6.11,3.479C4.9,3.946,3.945,4.902,3.477,6.111 c-0.263,0.7-0.404,1.438-0.419,2.186c-0.043,0.962-0.056,1.267-0.056,3.71c0,2.442,0,2.753,0.056,3.71 c0.015,0.748,0.156,1.486,0.419,2.187c0.469,1.208,1.424,2.164,2.634,2.632c0.696,0.272,1.435,0.426,2.185,0.45 c0.963,0.042,1.268,0.055,3.71,0.055s2.755,0,3.71-0.055c0.747-0.015,1.486-0.157,2.186-0.419c1.209-0.469,2.164-1.424,2.633-2.633 c0.263-0.7,0.404-1.438,0.419-2.186c0.043-0.962,0.056-1.267,0.056-3.71s0-2.753-0.056-3.71C20.941,7.57,20.801,6.819,20.533,6.111z M19.315,15.643c-0.007,0.576-0.111,1.147-0.311,1.688c-0.305,0.787-0.926,1.409-1.712,1.711c-0.535,0.199-1.099,0.303-1.67,0.311 c-0.95,0.044-1.218,0.055-3.654,0.055c-2.438,0-2.687,0-3.655-0.055c-0.569-0.007-1.135-0.112-1.669-0.311 c-0.789-0.301-1.414-0.923-1.719-1.711c-0.196-0.534-0.302-1.099-0.311-1.669c-0.043-0.95-0.053-1.218-0.053-3.654 c0-2.437,0-2.686,0.053-3.655c0.007-0.576,0.111-1.146,0.311-1.687c0.305-0.789,0.93-1.41,1.719-1.712 c0.534-0.198,1.1-0.303,1.669-0.311c0.951-0.043,1.218-0.055,3.655-0.055c2.437,0,2.687,0,3.654,0.055 c0.571,0.007,1.135,0.112,1.67,0.311c0.786,0.303,1.407,0.925,1.712,1.712c0.196,0.534,0.302,1.099,0.311,1.669 c0.043,0.951,0.054,1.218,0.054,3.655c0,2.436,0,2.698-0.043,3.654H19.315z"
+                  ></path>
+                </svg>
+                <span class="u-screen-reader-text">Instagram</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <!-- end s-header -->
+
+      <!-- # cookie policy content
+        ================================================== -->
+      <section class="s-cookie-policy">
+        <div class="s-cookie-policy__content">
+          <h1>Informativa sui cookie</h1>
+
+          <div class="s-cookie-policy__date">
+            <p>Data di entrata in vigore: 19 Febbraio 2026</p>
+            <p>Ultimo aggiornamento: 19 Febbraio 2026</p>
+          </div>
+
+          <h2>Cosa sono i cookie?</h2>
+          <p>
+            La presente Informativa sui cookie spiega cosa sono i cookie, come
+            li utilizziamo, i tipi di cookie che utilizziamo (ovvero le
+            informazioni che raccogliamo utilizzando i cookie e come tali
+            informazioni vengono utilizzate) e come gestire le impostazioni dei
+            cookie.
+          </p>
+          <p>
+            I cookie sono piccoli file di testo utilizzati per memorizzare
+            piccole informazioni. Vengono memorizzati sul dispositivo
+            dell'utente quando un sito web viene caricato nel browser. Questi
+            cookie contribuiscono a garantire il corretto funzionamento del sito
+            web, migliorano la sicurezza, offrono un'esperienza utente migliore
+            e analizzano le prestazioni per identificare cosa funziona e dove
+            sono necessari miglioramenti.
+          </p>
+
+          <h2>Come utilizziamo i cookie?</h2>
+          <p>
+            Come la maggior parte dei servizi online, il nostro sito web
+            utilizza cookie di prima parte e di terze parti per vari scopi. I
+            cookie di prima parte sono necessari principalmente per il corretto
+            funzionamento del sito web e non raccolgono dati personali
+            identificabili.
+          </p>
+          <p>
+            I cookie di terze parti utilizzati sul nostro sito web ci aiutano
+            principalmente a comprendere le prestazioni del sito web, a
+            tracciare il modo in cui interagisce con esso, a garantire la
+            sicurezza dei nostri servizi, a fornire annunci pubblicitari
+            pertinenti e a migliorare la sua esperienza complessiva,
+            ottimizzando al contempo la velocità delle sue interazioni future
+            con il nostro sito web.
+          </p>
+
+          <h2>Tipi di cookie utilizzati</h2>
+          <div class="cky-audit-table-element"></div>
+
+          <h2>Gestire le preferenze dei cookie</h2>
+          <a class="cky-banner-element">Preferenze relative al consenso</a>
+
+          <p>
+            È possibile modificare le impostazioni dei cookie in qualsiasi
+            momento facendo clic sul tasto "Preferenze di consenso" in alto. Ciò
+            consentirà di visualizzare nuovamente il banner di consenso ai
+            cookie e di aggiornare le proprie preferenze o revocare
+            immediatamente il proprio consenso.
+          </p>
+          <p>
+            Inoltre, diversi browser offrono vari metodi per bloccare ed
+            eliminare i cookie utilizzati dai siti web. È possibile modificare
+            le impostazioni del browser per bloccare o eliminare i cookie. Di
+            seguito sono riportati i link ai documenti di assistenza su come
+            gestire ed eliminare i cookie nei principali browser web.
+          </p>
+          <p>
+            <strong>Chrome:</strong>
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://support.google.com/accounts/answer/32050"
+            >
+              support.google.com/accounts/answer/32050
+            </a>
+          </p>
+          <p>
+            <strong>Safari:</strong>
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://support.apple.com/en-in/guide/safari/sfri11471/mac"
+            >
+              support.apple.com/guide/safari/sfri11471
+            </a>
+          </p>
+          <p>
+            <strong>Firefox:</strong>
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://support.mozilla.org/en-US/kb/clear-cookies-and-site-data-firefox"
+            >
+              support.mozilla.org/kb/clear-cookies-and-site-data-firefox
+            </a>
+          </p>
+          <p>
+            <strong>Internet Explorer:</strong>
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://support.microsoft.com/en-us/topic/how-to-delete-cookie-files-in-internet-explorer-bca9446f-d873-78de-77ba-d42645fa52fc"
+            >
+              support.microsoft.com - Delete cookie files
+            </a>
+          </p>
+          <p>
+            Qualora si stia utilizzando un browser web diverso, si prega di fare
+            riferimento alla documentazione di assistenza ufficiale.
+          </p>
+
+          <div class="s-cookie-policy__back">
+            <a href="index.html" class="btn btn--stroke">Torna alla Home</a>
+          </div>
+
+          <p class="s-cookie-policy__powered">
+            Informativa sui cookie generata da
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://www.cookieyes.com/?utm_source=CP&utm_medium=footer&utm_campaign=UW"
+            >
+              CookieYes - Generatore di informative sui cookie
+            </a>
+          </p>
+        </div>
+      </section>
+      <!-- end cookie policy -->
+
+      <!-- footer
+        ================================================== -->
+      <footer id="colophon" class="s-footer">
+        <div class="row">
+          <div class="column lg-12 ss-copyright">
+            <span>© Copyright Twinberry 2025</span>
+            <span
+              >Design by <a href="https://www.twinberry.it">Twinberry</a></span
+            >
+          </div>
+        </div>
+
+        <div class="ss-go-top">
+          <a title="Back to Top" href="#top">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              style="fill: rgba(0, 0, 0, 1)"
+            >
+              <path d="M6 4h12v2H6zm5 10v6h2v-6h5l-6-6-6 6z"></path>
+            </svg>
+          </a>
+        </div>
+        <!-- end ss-go-top -->
+      </footer>
+      <!-- end s-footer -->
+    </div>
+    <!-- end s-pagewrap -->
+
+    <!-- Java Script
+    ================================================== -->
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
