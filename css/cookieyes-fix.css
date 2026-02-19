@@ -46,3 +46,57 @@
   text-transform: uppercase !important;
   letter-spacing: 0.05em !important;
 }
+
+/* Colori CookieYes: da blu a nero */
+.cky-btn-accept,
+.cky-btn-customize,
+.cky-btn-preferences {
+  background-color: #1a1a1a !important;
+  border-color: #1a1a1a !important;
+  color: #ffffff !important;
+}
+
+.cky-btn-accept:hover,
+.cky-btn-customize:hover,
+.cky-btn-preferences:hover {
+  background-color: #333333 !important;
+  border-color: #333333 !important;
+}
+
+.cky-btn-reject {
+  background-color: transparent !important;
+  border-color: #1a1a1a !important;
+  color: #1a1a1a !important;
+}
+
+.cky-btn-reject:hover {
+  background-color: #1a1a1a !important;
+  color: #ffffff !important;
+}
+
+/* Link nel banner */
+.cky-consent-bar a,
+.cky-consent-container a {
+  color: #1a1a1a !important;
+}
+
+.cky-consent-bar a:hover,
+.cky-consent-container a:hover {
+  color: #333333 !important;
+}
+
+/* Toggle switch */
+.cky-switch input:checked + .cky-slider {
+  background-color: #1a1a1a !important;
+}
+
+/* Preferenze modal */
+.cky-preference-btn-wrapper .cky-btn {
+  background-color: #1a1a1a !important;
+  border-color: #1a1a1a !important;
+}
+
+.cky-preference-btn-wrapper .cky-btn:hover {
+  background-color: #333333 !important;
+  border-color: #333333 !important;
+}
