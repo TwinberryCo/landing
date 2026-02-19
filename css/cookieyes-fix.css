@@ -32,9 +32,8 @@
 .cky-consent-container *,
 .cky-modal *,
 .cky-consent-bar * {
-  font-family:
-    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial,
-    sans-serif !important;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif !important;
   letter-spacing: normal !important;
   text-transform: none !important;
 }
@@ -99,4 +98,8 @@
 .cky-preference-btn-wrapper .cky-btn:hover {
   background-color: #333333 !important;
   border-color: #333333 !important;
+}
+
+.cky-btn-revisit-wrapper {
+  visibility: hidden;
 }
