@@ -1,0 +1,48 @@
+/* ===================================================================
+ * CookieYes Banner Fix
+ * Fix per cursore, font e letter-spacing sul banner cookie
+ * ------------------------------------------------------------------- */
+
+/* Reset cursore */
+[data-cky-tag],
+.cky-consent-container,
+.cky-modal,
+.cky-btn,
+.cky-consent-bar {
+  cursor: auto !important;
+}
+
+[data-cky-tag] *,
+.cky-consent-container *,
+.cky-modal *,
+.cky-btn *,
+.cky-consent-bar * {
+  cursor: auto !important;
+}
+
+[data-cky-tag] a,
+[data-cky-tag] button,
+.cky-consent-container a,
+.cky-consent-container button {
+  cursor: pointer !important;
+}
+
+/* Reset font e letter-spacing per tutto il banner */
+[data-cky-tag] *,
+.cky-consent-container *,
+.cky-modal *,
+.cky-consent-bar * {
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial,
+    sans-serif !important;
+  letter-spacing: normal !important;
+  text-transform: none !important;
+}
+
+/* Pulsanti uppercase ma senza letter-spacing eccessivo */
+[data-cky-tag] button,
+.cky-consent-container button,
+.cky-btn {
+  text-transform: uppercase !important;
+  letter-spacing: 0.05em !important;
+}
