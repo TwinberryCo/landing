@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" class="no-js">
   <head>
-    <!-- Start cookieyes banner --> <script id="cookieyes" type="text/javascript" src="https://cdn-cookieyes.com/client_data/fd3a4803320b7d1b58e87c25f4fd7a1f/script.js"></script> <!-- End cookieyes banner -->
     <!--- basic page needs
     ================================================== -->
     <meta charset="utf-8" />
@@ -13,10 +12,33 @@
       document.documentElement.classList.add("js");
     </script>
 
+    <!-- Google Fonts (caricati prima di CookieYes per evitare blocco)
+    ================================================== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Lora:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+    <!-- Start cookieyes banner -->
+    <script id="cookieyes" type="text/javascript" src="https://cdn-cookieyes.com/client_data/fd3a4803320b7d1b58e87c25f4fd7a1f/script.js"></script>
+    <!-- End cookieyes banner -->
+
     <!-- CSS
     ================================================== -->
     <link rel="stylesheet" href="css/vendor.css" />
     <link rel="stylesheet" href="css/styles.css" />
+
+    <!-- Fix cursore per banner CookieYes -->
+    <style>
+      [data-cky-tag], .cky-consent-container, .cky-modal, .cky-btn, .cky-consent-bar {
+        cursor: auto !important;
+      }
+      [data-cky-tag] *, .cky-consent-container *, .cky-modal *, .cky-btn *, .cky-consent-bar * {
+        cursor: auto !important;
+      }
+      [data-cky-tag] a, [data-cky-tag] button, .cky-consent-container a, .cky-consent-container button {
+        cursor: pointer !important;
+      }
+    </style>
 
     <!-- favicons
     ================================================== -->

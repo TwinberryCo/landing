@@ -77,8 +77,9 @@
 
 /* ------------------------------------------------------------------- 
  * ## fonts 
+ * I font Google sono caricati in index.html prima di CookieYes
+ * per evitare che vengano bloccati dal banner cookie
  * ------------------------------------------------------------------- */
-@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
 
 :root {
   --font-1: "Lora", serif;
@@ -550,7 +551,9 @@ body {
   background-position: center;
   pointer-events: none;
   z-index: 9999;
-  transition: transform 0.15s ease, opacity 0.15s ease;
+  transition:
+    transform 0.15s ease,
+    opacity 0.15s ease;
   transform: translate(-50%, -50%);
   filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.8));
 }
@@ -564,9 +567,13 @@ body {
   border-radius: 50%;
   pointer-events: none;
   z-index: 9998;
-  transition: transform 0.2s ease, opacity 0.3s ease;
+  transition:
+    transform 0.2s ease,
+    opacity 0.3s ease;
   transform: translate(-50%, -50%);
-  box-shadow: 0 0 8px rgba(255, 255, 255, 0.8), 0 0 3px rgba(0, 0, 0, 0.4);
+  box-shadow:
+    0 0 8px rgba(255, 255, 255, 0.8),
+    0 0 3px rgba(0, 0, 0, 0.4);
 }
 
 .custom-cursor.hover {
@@ -3746,7 +3753,9 @@ img.u-pull-left {
   opacity: 0;
   visibility: hidden;
   transform: scale(0.5);
-  transition: all, 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition:
+    all,
+    0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
   position: absolute;
   left: 50%;
   top: 50%;
@@ -3755,7 +3764,9 @@ img.u-pull-left {
 .folio-item__thumb img {
   vertical-align: bottom;
   margin-bottom: 0;
-  transition: all, 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition:
+    all,
+    0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 
 /* portfolio info
