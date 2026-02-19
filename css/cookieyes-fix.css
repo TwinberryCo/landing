@@ -100,6 +100,10 @@
   border-color: #333333 !important;
 }
 
+/* Nasconde visivamente il pulsante revisit ma lo mantiene accessibile per lo script */
 .cky-btn-revisit-wrapper {
-  visibility: hidden;
+  position: fixed !important;
+  left: -9999px !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
 }

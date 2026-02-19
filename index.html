@@ -965,7 +965,7 @@
         <div class="row">
           <div class="column lg-12 ss-copyright">
             <span>© Copyright Twinberry 2025</span>
-            <span>Design by <a href="https://www.twinberry.it">Twinberry</a></span>
+            <span>Design by <a href="https://twinberry.it">Twinberry</a></span>
             <span><a href="cookie-policy.html">Cookie Policy</a></span>
             <span><a id="customCookieLink" href="#">Gestione Consenso Cookie</a></span>
           </div>
@@ -1053,5 +1053,28 @@
     ================================================== -->
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
+
+    <!-- CookieYes Consent Link -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        var cookieLink = document.getElementById('customCookieLink');
+        if (cookieLink) {
+          cookieLink.addEventListener('click', function(e) {
+            e.preventDefault();
+            // Metodo 1: API ufficiale CookieYes
+            if (typeof revisitCkyConsent === 'function') {
+              revisitCkyConsent();
+            } 
+            // Metodo 2: Clicca sul pulsante nascosto di revisit
+            else {
+              var revisitBtn = document.querySelector('.cky-btn-revisit-wrapper button, [data-cky-tag="revisit-consent"] button');
+              if (revisitBtn) {
+                revisitBtn.click();
+              }
+            }
+          });
+        }
+      });
+    </script>
   </body>
 </html>
